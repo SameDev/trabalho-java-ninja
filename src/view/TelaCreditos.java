@@ -31,7 +31,7 @@ public class TelaCreditos extends JFrame {
 
         cartao(startX,                  80, cardW, "naruto.png",  "NARUTO",  "Alisson Gonçalves Selau",  null);
         cartao(startX + cardW + gap,    80, cardW, "sasuke.jpeg",  "SASUKE",  "Saymon Espindola Inacio",  null);
-        cartao(startX + (cardW+gap)*2,  80, cardW, "goku.jpeg",    "GOKU",    "Samuel Conradt do Amaral", "(Ele não sabe de anime)");
+        cartao(startX + (cardW+gap)*2,  80, cardW, "goku.png",    "GOKU",    "Samuel Conradt do Amaral", "(Ele não sabe de anime)");
     }
 
     private void cartao(int x, int y, int w, String arquivo, String personagem, String nome, String obs) {
