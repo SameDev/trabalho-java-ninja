@@ -13,10 +13,11 @@ public class TelaPrincipal extends JFrame {
     private JButton btnVincular;
     private JButton btnTotalizadores;
     private JButton btnViews;
+    private JButton btnCreditos;
 
     public TelaPrincipal() {
-        setTitle("Sistema de Gerenciamento Ninja");
-        setSize(420, 430);
+        setTitle("NinJava");
+        setSize(420, 490);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setLayout(null);
@@ -26,7 +27,7 @@ public class TelaPrincipal extends JFrame {
     }
 
     private void componentesCriar() {
-        lblTitulo = new JLabel("SISTEMA NINJA", SwingConstants.CENTER);
+        lblTitulo = new JLabel("NINJAVA", SwingConstants.CENTER);
         lblTitulo.setFont(new Font("Arial Black", Font.BOLD, 20));
         lblTitulo.setForeground(NinjaTheme.ORANGE_HOT);
         lblTitulo.setBounds(20, 15, 380, 45);
@@ -36,7 +37,7 @@ public class TelaPrincipal extends JFrame {
         painelBotoes.setLayout(null);
         painelBotoes.setBackground(NinjaTheme.BG_PANEL);
         painelBotoes.setBorder(NinjaTheme.bordaTitulo("Menu Principal"));
-        painelBotoes.setBounds(30, 75, 355, 320);
+        painelBotoes.setBounds(30, 75, 355, 385);
         getContentPane().add(painelBotoes);
 
         int y = 30;
@@ -64,9 +65,14 @@ public class TelaPrincipal extends JFrame {
         btnTotalizadores.addActionListener(e -> new TelaTotalizadores());
 
         btnViews = botao("Consultar Views");
-        btnViews.setBounds(25, y, 305, h);
+        btnViews.setBounds(25, y, 305, h); y += h + gap;
         painelBotoes.add(btnViews);
         btnViews.addActionListener(e -> new TelaViews());
+
+        btnCreditos = botao("Créditos");
+        btnCreditos.setBounds(25, y, 305, h);
+        painelBotoes.add(btnCreditos);
+        btnCreditos.addActionListener(e -> new TelaCreditos());
     }
 
     private JButton botao(String texto) {
